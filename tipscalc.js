@@ -11,7 +11,6 @@ function calculateTips(event) {
 
   //if button is clicked, display 15% and 20% amount.
 
-  // cool comment
   //   event.target.innerHTML = "You owe $" + fifteen.toFixed(2);
 
   //create what we want inside the div
