@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="tipscalc.css" rel="stylesheet" />
+    <script defer src="tipscalc.js"></script>
+   
+    <title>TipsCalculator</title>
+
+    <!-- CSS only
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+</head>
+<body>
+
+<div class='container'>
+    <h1>Insert amount to calculate tips.</h1>
+    <!-- <h2>bill amount</h2> -->
+
+<form onsubmit="calculateTips(event)">
+    <input id='billAmount' type='number' step='.01' placeholder="bill amount" min="0"/>
+    <button type='submit'>Add 15% Tip</button>
+    </form>
+    <h2 id="amountOwed"></h2> 
+    
+    
+<div id='showAmount'></div>
+
+    </div>
+
+
+</body>
+</html>
