@@ -3,19 +3,16 @@
 //once you click the button, calculates 15% and 20% of the input number.
 
 function calculateTips(event) {
+  //refreshes the text after button is clicked
   event.preventDefault();
-  let number = document.getElementById("billAmount").value;
+  let number = parseInt(document.getElementById("billAmount").value);
+  let percentOfBill = parseInt(document.getElementById("percentOfBill").value);
 
-  let fifteen = number * 1.15;
-  let twenty = number * 1.2;
-
-  //if button is clicked, display 15% and 20% amount.
-
-  //   event.target.innerHTML = "You owe $" + fifteen.toFixed(2);
+  let calculation = number * (percentOfBill / 100) + number;
 
   //create what we want inside the div
   const display = document.createElement("h1");
-  display.innerText = "You owe: $" + fifteen.toFixed(2);
+  display.innerText = "You owe: $" + calculation.toFixed(2);
 
   //get the div showAmount from html
   const targetDiv = document.getElementById("showAmount");
@@ -25,8 +22,4 @@ function calculateTips(event) {
   targetDiv.innerHTML = "";
   targetDiv.appendChild(display);
   console.log(targetDiv);
-
-  //   'ways to get the value of an input into the function'
-  //   console.log(number.value);
-  //   console.log(event.target[0].value);
 }
